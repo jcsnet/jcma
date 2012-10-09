@@ -1,9 +1,19 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" template="/template.xhtml">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+                template="/template.xhtml">
 
     <ui:define name="content">
         <h1>Hi this is index page</h1>
+
+        <h:form rendered="#{bean.formVisible}">
+            <h:inputText value="#{bean.name}" required="true"/>
+            <h:commandButton value="Say Hi" action="#{bean.sayHi}"/>
+            <h:messages/>
+            <pre>
+                <h:outputText value="#{loggingBean.log}"/>
+            </pre>
+        </h:form>
     </ui:define>
 
 </ui:composition>

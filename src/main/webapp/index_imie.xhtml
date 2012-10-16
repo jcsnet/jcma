@@ -8,14 +8,14 @@
     </h:head>
     <h:body>
         <h:form>
-            <p>Wpisz swoje imie : </p>
+            <p>Twoje imie to : </p>
             <table>
                 <tr>
                     <td>Imie :</td>     
-                    <td> <h:inputText id="inputImie" value="#{user.imie}" size="20"/>  </td>    
+                    <td> <h:outputText id="inputImie" value="#{user.imie}" size="20"/>  </td>    
                 </tr>
             </table>
-            <h:commandButton id="button" value="Przesli dane" action="/index_imie"/>
+            <h:commandButton id="button" value="Podaj ponownie" action="/index"/>
 
         </h:form>
     </h:body>
